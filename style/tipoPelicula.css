@@ -1,0 +1,56 @@
+.contenedor-titulo {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.container-tarjetas {
+    display: inline-flex;
+    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.contenedor-carta {
+    padding: 5px;
+    margin: 20px;
+}
+
+.contenedor-carta h5 {
+    text-align: center;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.image-carta {
+    height: 350px;
+    object-fit: cover;
+}
+
+.precio {
+    border-radius: 5px;
+    background-color: rgba(82, 196, 82, 0.822);
+}
+
+.precio h5 {
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 530px) {
+    .container-tarjetas {
+        margin: 0;
+    }
+    .contenedor-carta {
+        padding: 5px;
+        margin: 20px 10px;
+    }
+    .contenedor-titulo {
+        font-size: 25px;
+    }
+}

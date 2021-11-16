@@ -1,0 +1,84 @@
+import movie from './data.js'
+
+const pelis = document.querySelector('#contenedorPrincipal');
+
+function verStorage() {
+    idMovie = localStorage.getItem('idMovie');
+    movie.forEach(moviedata => {
+        if (idMovie == moviedata.id) {
+            const items = document.createElement('div');
+            document.title = "CineFlix | " + moviedata.name;
+            items.innerHTML = `
+                    <div class="div-img">
+                        <img src="${moviedata.image}" alt="">
+                    </div>
+                    <div class="contenedor-descripcion">
+                        <div>
+                            <div class="div-titulo">
+                                <h2>${moviedata.name}</h2>
+                            </div>
+                            <div>
+                                 <p>
+                                    ${moviedata.descripcion}
+                                </p>
+                            </div>
+                            <div class="contenedor-botones">
+                                <div class="div-boton">
+                                    <label for="">$ ${Intl.NumberFormat('es-DE').format(moviedata.precio)}</label>
+                                </div>    
+                                <div class="div-boton">
+                                    <input type="text" id="cantidad" placeholder="0">
+                                </div>    
+                                <div class="div-boton">
+                                    <button class="btn btn-primary" id="comprar">Agregar al Carrito</button>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                `;
+            pelis.appendChild(items);
+            precio = Number(moviedata.precio);
+            nombre = moviedata.name;
+            imagen = moviedata.image;
+            id = idMovie;
+
+        }
+    });
+}
+
+
+
+let idMovie;
+let cantidad, precio, nombre, imagen, id;
+
+let objetoCarrito = JSON.parse(localStorage.getItem('Carrito'));
+//let adquirido = true;
+verStorage();
+
+let cantidadProductos = JSON.parse(localStorage.getItem('cantidadProductos'));
+
+const comprarPeli = () => {
+
+    cantidad = document.getElementById("cantidad").value;
+    objetoCarrito.push({
+        "id": id,
+        "nombre": nombre,
+        "precio": precio,
+        "cantidad": cantidad,
+        "imagen": imagen
+    });
+    localStorage.setItem('Carrito', JSON.stringify(objetoCarrito));
+    cantidadProductos = objetoCarrito.length;
+    localStorage.setItem('cantidadProductos', JSON.stringify(cantidadProductos));
+    swal({
+        title: "¡Agregado Al Carrito!",
+        text: "¡El producto se ha agregado al carrito de manera exitosa!",
+        icon: "success",
+    }).then(() => {
+        location.reload()
+    });
+
+}
+
+let boton = document.getElementById('comprar');
+boton.addEventListener('click', comprarPeli);
