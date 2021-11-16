@@ -1,4 +1,7 @@
-let arrayCompra = JSON.parse(localStorage.getItem('Compra'));
+let arrayCompra = [];
+if (JSON.parse(localStorage.getItem('Compra'))) {
+    arrayCompra = JSON.parse(localStorage.getItem('Compra'));
+}
 let arrayCarrito = JSON.parse(localStorage.getItem('Carrito'));
 let precioTotalCompra = JSON.parse(localStorage.getItem('ValorCompra'));
 const enviarLocal = () => {
@@ -34,13 +37,13 @@ const enviarLocal = () => {
             "valor": precioTotalCompra,
             "carrito": arrayCarrito
         });
-        /*localStorage.setItem("Compra", JSON.stringify(arrayCompra));*/
+        localStorage.setItem("Compra", JSON.stringify(arrayCompra));
         swal({
             title: "Compra exitosa!",
             text: "La compra fue realizada de manera exitosa!",
             icon: "success",
         }).then(() => {
-            /*location.reload()*/
+            location.reload()
         });
 
         arrayCarrito.splice(0, arrayCarrito.length);
