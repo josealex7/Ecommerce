@@ -27,7 +27,7 @@ function verStorage() {
                                     <label for="">$ ${Intl.NumberFormat('es-DE').format(moviedata.precio)}</label>
                                 </div>    
                                 <div class="div-boton">
-                                    <input type="text" id="cantidad" placeholder="0">
+                                    <input type="number" id="cantidad" placeholder="0">
                                 </div>    
                                 <div class="div-boton">
                                     <button class="btn btn-primary" id="comprar">Agregar al Carrito</button>
