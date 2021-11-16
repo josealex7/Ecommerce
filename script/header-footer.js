@@ -1,5 +1,8 @@
 const header = document.querySelector('#menu-encabezado');
-let cantidadProductos = JSON.parse(localStorage.getItem('cantidadProductos'));
+let cantidadProductos = 0;
+if (JSON.parse(localStorage.getItem('cantidadProductos'))) {
+    cantidadProductos = JSON.parse(localStorage.getItem('cantidadProductos'));
+}
 const encabezado = () => {
     const items = document.createElement('div');
     items.innerHTML = `

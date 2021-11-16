@@ -51,11 +51,17 @@ function verStorage() {
 let idMovie;
 let cantidad, precio, nombre, imagen, id;
 
-let objetoCarrito = JSON.parse(localStorage.getItem('Carrito'));
+let objetoCarrito = []
+if (JSON.parse(localStorage.getItem('Carrito'))) {
+    objetoCarrito = JSON.parse(localStorage.getItem('Carrito'));
+}
 //let adquirido = true;
 verStorage();
 
-let cantidadProductos = JSON.parse(localStorage.getItem('cantidadProductos'));
+let cantidadProductos = 0;
+if (JSON.parse(localStorage.getItem('cantidadProductos'))) {
+    cantidadProductos = JSON.parse(localStorage.getItem('cantidadProductos'));
+}
 
 const comprarPeli = () => {
 

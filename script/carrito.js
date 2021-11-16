@@ -1,5 +1,10 @@
 const pelis = document.querySelector('#contenedor-secundario');
-let arrayCarrito = JSON.parse(localStorage.getItem('Carrito'));
+let arrayCarrito = [];
+
+if (JSON.parse(localStorage.getItem('Carrito'))) {
+    arrayCarrito = JSON.parse(localStorage.getItem('Carrito'));
+}
+
 let arrayId = [];
 
 let arraySubtotales = [];
