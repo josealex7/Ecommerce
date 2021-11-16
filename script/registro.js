@@ -6,7 +6,7 @@ const enviarLocal = () => {
     nombre = document.getElementById('nombre').value;
     correo = document.getElementById('correo').value;
     numeroTarjeta = Number(document.getElementById('numeroTarjeta').value);
-    fechaVencimiento = Number(document.getElementById('fechaVencimiento').value);
+    fechaVencimiento = document.getElementById('fechaVencimiento').value;
     cvv = Number(document.getElementById('cvv').value);
 
     if (nombre == "" || correo == "" || numeroTarjeta == 0 || fechaVencimiento == "" || cvv == 0) {
