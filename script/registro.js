@@ -39,6 +39,8 @@ const enviarLocal = () => {
             title: "Compra exitosa!",
             text: "La compra fue realizada de manera exitosa!",
             icon: "success",
+        }).then(() => {
+            location.reload()
         });
 
         arrayCarrito.splice(0, arrayCarrito.length);
