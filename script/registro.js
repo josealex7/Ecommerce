@@ -16,6 +16,8 @@ const enviarLocal = () => {
             icon: "error",
         });
     } else if (isNaN(numeroTarjeta) || isNaN(cvv)) {
+        alert(numeroTarjeta)
+        alert(cvv)
         swal({
             title: "Error!",
             text: "¡El campo los campos de Numero de Tarjeta, Fecha de Vencimiento y CVV debe ser numerico!",
