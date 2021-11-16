@@ -24,7 +24,7 @@ const enviarLocal = () => {
             icon: "error",
         });
     } else {
-
+        /*
         arrayCompra.push({
             "nombre": nombre,
             "correo": correo,
@@ -34,7 +34,7 @@ const enviarLocal = () => {
             "valor": precioTotalCompra,
             "carrito": arrayCarrito
         });
-        localStorage.setItem("Compra", JSON.stringify(arrayCompra));
+        localStorage.setItem("Compra", JSON.stringify(arrayCompra));*/
         swal({
             title: "Compra exitosa!",
             text: "La compra fue realizada de manera exitosa!",
