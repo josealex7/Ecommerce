@@ -15,7 +15,7 @@ const enviarLocal = () => {
             text: "¡Debe llenar todos los campos!",
             icon: "error",
         });
-    } else if (isNaN(numeroTarjeta) || isNaN(fechaVencimiento) || isNaN(cvv)) {
+    } else if (isNaN(numeroTarjeta) || isNaN(cvv)) {
         swal({
             title: "Error!",
             text: "¡El campo los campos de Numero de Tarjeta, Fecha de Vencimiento y CVV debe ser numerico!",
