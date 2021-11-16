@@ -65,24 +65,34 @@ if (JSON.parse(localStorage.getItem('cantidadProductos'))) {
 
 const comprarPeli = () => {
 
+
+
     cantidad = document.getElementById("cantidad").value;
-    objetoCarrito.push({
-        "id": id,
-        "nombre": nombre,
-        "precio": precio,
-        "cantidad": cantidad,
-        "imagen": imagen
-    });
-    localStorage.setItem('Carrito', JSON.stringify(objetoCarrito));
-    cantidadProductos = objetoCarrito.length;
-    localStorage.setItem('cantidadProductos', JSON.stringify(cantidadProductos));
-    swal({
-        title: "¡Agregado Al Carrito!",
-        text: "¡El producto se ha agregado al carrito de manera exitosa!",
-        icon: "success",
-    }).then(() => {
-        location.reload()
-    });
+    if (isNaN(cantidad) || cantidad == 0) {
+        swal({
+            title: "¡No fue posible agregar al carrito!",
+            text: "¡El valor ingresado en cantidad debe ser mayor a 0!",
+            icon: "error",
+        });
+    } else {
+        objetoCarrito.push({
+            "id": id,
+            "nombre": nombre,
+            "precio": precio,
+            "cantidad": cantidad,
+            "imagen": imagen
+        });
+        localStorage.setItem('Carrito', JSON.stringify(objetoCarrito));
+        cantidadProductos = objetoCarrito.length;
+        localStorage.setItem('cantidadProductos', JSON.stringify(cantidadProductos));
+        swal({
+            title: "¡Agregado Al Carrito!",
+            text: "¡El producto se ha agregado al carrito de manera exitosa!",
+            icon: "success",
+        }).then(() => {
+            location.reload()
+        });
+    }
 
 }
 
