@@ -1,39 +1,15 @@
-# Reto: Películas
+# CineFlix
 
+Es una app que muestra las peliculas por categoria, muestra el detalle, permite agregar al carrito y simular un formulario de pago
 
-Usted ha sido contratado por la empresa “Películas para ti” para que desarrolle una aplicación web que cuente con los siguientes requerimientos técnicos:
+Link de desplegable: https://josealex7.github.io/Ecommerce/
 
-Implementar un menú de navegación que cuente con logo, página de inicio y registro
-En la página de inicio se debe visualizar un slider de imágenes de las películas
-Debajo del slider se deben cargar la tarjeta de las películas con su respectivo nombre e imagen (esta configuración se debe realizar desde JavaScript).
-En la página de Registro, debe de cargar un formulario que contenga los campos mostrados en la imagen. Al momento de hacer clic en el botón “Enviar” esta información debe ser almacenadas en el local storage
+![image](https://user-images.githubusercontent.com/89882027/151457320-dd9ac896-6bb7-4464-86ed-7c442ebf6dd4.png)
 
-![imagen2](https://res.cloudinary.com/duzf4vfki/image/upload/v1627495000/Tarea-01-img1_fiwnfg.png)
+![image](https://user-images.githubusercontent.com/89882027/151457380-12fbc9f0-dfc1-49e1-bedf-e8124a64b644.png)
 
-![imagen2](https://res.cloudinary.com/duzf4vfki/image/upload/v1627495000/Tarea-01-img2_ofze6q.png)
+![image](https://user-images.githubusercontent.com/89882027/151457489-585d6644-68d7-4e26-b6be-c4034df2919e.png)
 
-![imagen2](https://res.cloudinary.com/duzf4vfki/image/upload/v1627495000/Tarea-01-img3_vtuxql.png)
+![image](https://user-images.githubusercontent.com/89882027/151457644-36891709-75ff-4d8f-b99f-078b7fdf021a.png)
 
-
-Se debe implementar las siguientes funcionalidades en JavaScritp.
-
-- condicionales
-- arreglos
-- forEach o map
-- función appendChild
-- función createDocumentFragment
-- función createElement
-- función setAttribute
-- función isNaN
-- objetos
-- localstorage
-
-
-Para realizar la entrega de esta actividad debe realizar los siguientes pasos:
-
-    1. Crear un Issues llamado Entrega-Modulo-3-Tarea-02-Peliculas
-    2. Al Issues adicionar un pantallazo con el enunciado de la tarea
-    3. Luego debes agregar la descripción de los pasos que ejecutaste para dar solución a la tarea y 
-       adjuntar las imágenes de evidencia.  
-    4. Etiquetar al formador a cargo “@JohnFlorez25” el cual revisará su ejercicio y dará las respectivas observaciones  
-https://laughing-broccoli-bea40e0c.pages.github.io/Modulo-3/Tarea-02/
+![image](https://user-images.githubusercontent.com/89882027/151457688-c70acf22-5227-42cc-9365-b98c27980b36.png)
